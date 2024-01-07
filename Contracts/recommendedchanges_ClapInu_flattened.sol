@@ -1,3 +1,4 @@
+
 /*
 
 Website: https://www.clapinu.com/
@@ -12,16 +13,10 @@ Token Details
     Total Supply: 100,000,000 STD
     Blockchain: Avalanche (ERC-20 compliant)
 
-Modifications from the Original Contract
-
-    Transitioned to using OpenZeppelin contracts for basic functionalities.
-    Updated transfer logic to OpenZeppelin's _beforeTokenTransfer.
-    Simplified ownership management with OpenZeppelin's Ownable.
-    Adapted standard burn functionality of ERC-20.
-    Removed the fallback function for simplicity.
-    Overall code optimization for enhanced performance.
-
 */
+
+
+
 
 
 // File: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v4.5/contracts/utils/Context.sol
@@ -632,6 +627,23 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
 // File: clapinu.sol
 
 
+
+/*
+
+Website: https://www.clapinu.com/
+TG: https://t.me/ClapInu
+Twitter: https://twitter.com/ClapInuAvax
+
+Token Details
+
+    Name: ClapInu
+    Symbol: STD
+    Decimals: 18
+    Total Supply: 100,000,000 STD
+    Blockchain: Avalanche (ERC-20 compliant)
+
+*/
+
 pragma solidity 0.8.19;
 
 
@@ -700,5 +712,16 @@ contract ClapInu is ERC20, Ownable {
      */
     function recoverETH(uint256 amount) external onlyOwner {
         payable(owner()).transfer(amount);
+    }
+
+ /**
+     * @dev Allows the destruction of tokens
+     *
+     * Requirements:
+     *
+     * - msg.sender can call this function.
+     */
+    function burn(uint256 amount) external {
+        _burn(msg.sender, amount);
     }
 }
