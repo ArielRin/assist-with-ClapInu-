@@ -1,7 +1,7 @@
 # ClapInu Token (STD) - GitHub README
 
 ## Welcome to ClapInu Token
-The ClapInu Token (STD) represents a significant step forward in the world of digital assets. Designed as an ERC-20 token on the Ethereum blockchain, ClapInu is not just a cryptocurrency; it's a symbol of community strength and innovation.
+The ClapInu Token (STD) represents a significant step forward in the world of digital assets. Designed as an ERC-20 token on the Avalanche blockchain, ClapInu is not just a cryptocurrency; it's a symbol of community strength and innovation.
 
 ### Project Overview
 ClapInu Token (STD) is created with a vision to integrate advanced blockchain functionalities and a community-centric approach. This repository provides the entire smart contract code for ClapInu, along with comprehensive documentation detailing its features, tokenomics, and the modifications made from its original version.
